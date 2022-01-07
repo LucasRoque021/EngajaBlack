@@ -2,7 +2,338 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<body class="body">
+    <div class="card">
+
+        <a asp-controller="Produtoes" asp-action="Index"><button type="button" class="btn btn-danger">Sou
+            Cliente</button></a>
+        
+        <a asp-controller="Empreendedors" asp-action="Create"><button type="button" class="btn btn-danger"
+            >Sou Empreendedor</button></a>
+        
+        <a asp-controller = "Fornecedors" asp-action = "Create"><button type="button" class="btn btn-danger" >Sou Forncedor</button></a>
+
+        <div class="modal fade" id="cliente" tabindex="-1" role="dialog" aria-labelledby="clienteLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="clienteLabel">Busque uma loja na perifa !</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+
+                        <form class="col-12">
+                            <div class="form-row col justify-content-center">
+
+                                <div class="form-group col-md-12">
+                                    <label for="inputnegociotype">Ramo</label>
+                                    <select id="inputnegociotype" class="form-control">
+                                        <option selected>Escolha...</option>
+                                        <option> Comida </option>
+                                        <option> Roupas </option>
+                                        <option> Beleza </option>
+                                        <option> Bares / Depósito de bebidas </option>
+                                        <option> Eletrônicos </option>
+                                        <option> Tabacaria </option>
+                                        <option> Festa </option>
+                                        <option> Oficina </option>
+                                        <option> Eventos/arte/cultura </option>
+
+                                    </select>
+                                </div>
+
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label for="inputPartida4">Município</label>
+                                <select id="inputPartida" class="form-control">
+                                    <option selected>Escolha...</option>
+                                    <option> Rio de Janeiro - RJ </option>
+                                    <option> São Paulo - SP </option>
+                                    <option> Brasília - DS </option>
+                                    <option> Fortaleza - CE </option>
+                                    <option> Salvador - BH </option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label for="inputDestino">Região de atuação (comunidade)</label>
+                                <select id="inputDestino" class="form-control">
+                                    <option selected>Escolha...</option>
+                                    <option> Jacaré </option>
+                                    <option> Mangueira </option>
+                                    <option> Mandela </option>
+                                    <option> Urubu </option>
+                                    <option> Nova Holanda </option>
+                                </select>
+                            </div>
+                           </form>>
+                    </div>
+
+
+
+
+
+
+                    <div class="modal-footer">
+                        <div class="form-check align-content-center">
+                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            Aceito os termos de condição
+
+                        </div>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                        <a href="../cliente/index.html"><button type="button" class="btn btn-primary">Buscar</button></a>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div class="modal fade" id="fornecedor" tabindex="-1" role="dialog" aria-labelledby="fornecedorLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="fornecedorLabel">Dados do Fornecedor</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+
+                        <form class="col-12">
+                            <div class="form-row col justify-content-center">
+                                <div class="form-group col-md-12">
+                                    <label for="inputNome1">Nome Completo</label>
+                                    <input type="nome" class="form-control" id="inputNome1" placeholder="Nome Completo">
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label for="inputNome">Endereço</label>
+                                    <input type="nome" class="form-control" id="inputNome2"
+                                        placeholder="Rua , nº, complemento">
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label for="inputNome">Telefone</label>
+                                    <input type="nome" class="form-control" id="inputNome3"
+                                        placeholder="(99)99999-9999">
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label for="inputNome">CNPJ</label>
+                                    <input type="nome" class="form-control" id="inputNome4"
+                                        placeholder="XX. XXX. XXX/0001-XX">
+                                </div>
+
+                                <div class="form-group col-md-12">
+                                    <label for="inputnegociotype">Ramo</label>
+                                    <select id="inputnegociotype" class="form-control">
+                                        <option selected>Escolha...</option>
+                                        <option> Comida </option>
+                                        <option> Roupas </option>
+                                        <option> Beleza </option>
+                                        <option> Bares / Depósito de bebidas </option>
+                                        <option> Eletrônicos </option>
+                                        <option> Tabacaria </option>
+                                        <option> Festa </option>
+                                        <option> Oficina </option>
+                                        <option> Eventos/arte/cultura </option>
+
+                                    </select>
+                                </div>
+                            </div>
+                            </form>>
+                            <div class="form-group col-md-12">
+                                <label for="inputPartida4">Município</label>
+                                <select id="inputPartida" class="form-control">
+                                    <option selected>Escolha...</option>
+                                    <option> Rio de Janeiro - RJ </option>
+                                    <option> São Paulo - SP </option>
+                                    <option> Brasília - DS </option>
+                                    <option> Fortaleza - CE </option>
+                                    <option> Salvador - BH </option>
+                                </select>
+
+                            </div>
+
+                    </div>
+                    <div class="form-group col-md-12">
+                        <span class="input-group-addon align-content-center">Funcionamento:</span>
+                        <div class="form-row">
+                            <a class="dropdown-item" href="#">
+                                Das
+                                <div class="input-timerange input-group col-md-6" id="timepicker">
+                                    <input type="time" class="input-sm form-control" name="start" />
+                                </div>
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                Às
+                                <div class="input-timerange input-group col-md-6" id="timepicker">
+                                    <input type="time" class="input-sm form-control" name="start" />
+                                </div>
+                            </a>
+
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="modal-footer">
+                        <div class="form-check align-content-center">
+                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            Aceito os termos de condição
+
+                        </div>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                        <a href="../fornecedor/index.html"><button type="button" class="btn btn-primary">Cadastrar</button></a>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div class="modal fade" id="empreendedor" tabindex="-1" role="dialog" aria-labelledby="empreendedorLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="empreendedorLabel">Dados do Empreendedor</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+
+                        <form class="col-12">
+                            <div class="form-row col justify-content-center">
+                                <div class="form-group col-md-12">
+                                    <label for="inputNome1">Nome Completo</label>
+                                    <input type="nome" class="form-control" id="inputNome1" placeholder="Nome Completo">
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label for="inputNome">Endereço</label>
+                                    <input type="nome" class="form-control" id="inputNome2"
+                                        placeholder="Rua , nº, complemento">
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label for="inputNome">Telefone</label>
+                                    <input type="nome" class="form-control" id="inputNome3"
+                                        placeholder="(99)99999-9999">
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label for="inputNome">CNPJ</label>
+                                    <input type="nome" class="form-control" id="inputNome4"
+                                        placeholder="XX. XXX. XXX/0001-XX">
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label for="inputnegociotype">Ramo</label>
+                                    <select id="inputnegociotype" class="form-control">
+                                        <option selected>Escolha...</option>
+                                        <option> Comida </option>
+                                        <option> Roupas </option>
+                                        <option> Beleza </option>
+                                        <option> Bares / Depósito de bebidas </option>
+                                        <option> Eletrônicos </option>
+                                        <option> Tabacaria </option>
+                                        <option> Festa </option>
+                                        <option> Oficina </option>
+                                        <option> Eventos/arte/cultura </option>
+
+                                    </select>
+                                </div>
+                            </div>
+                           </form>>
+                            <div class="form-group col-md-12">
+                                <label for="inputPartida4">Município</label>
+                                <select id="inputPartida" class="form-control">
+                                    <option selected>Escolha...</option>
+                                    <option> Rio de Janeiro - RJ </option>
+                                    <option> São Paulo - SP </option>
+                                    <option> Brasília - DS </option>
+                                    <option> Fortaleza - CE </option>
+                                    <option> Salvador - BH </option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label for="inputDestino">Região de atuação (comunidade)</label>
+                                <select id="inputDestino" class="form-control">
+                                    <option selected>Escolha...</option>
+                                    <option> Jacaré </option>
+                                    <option> Mangueira </option>
+                                    <option> Mandela </option>
+                                    <option> Urubu </option>
+                                    <option> Nova Holanda </option>
+                                </select>
+                            </div>
+                          
+                            <div class="form-group col-md-12">
+                                <span class="input-group-addon align-content-center">Funcionamento:</span>
+                                <div class="form-row">
+                                    <a class="dropdown-item" href="#">
+                                        Das
+                                        <div class="input-timerange input-group col-md-6" id="timepicker">
+                                            <input type="time" class="input-sm form-control" name="start" />
+                                        </div>
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                        Às
+                                        <div class="input-timerange input-group col-md-6" id="timepicker">
+                                            <input type="time" class="input-sm form-control" name="start" />
+                                        </div>
+                                    </a>
+
+                                </div>
+                            </div>
+                           
+
+
+
+
+                            <div class="modal-footer">
+                                <div class="form-check align-content-center">
+                                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                                    Aceito os termos de condição
+
+                                </div>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                                <a href="../empreendedor/index.html"><button type="button" class="btn btn-primary">Cadastrar</button></a>
+                            </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            
+
+
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="container denuncia">
+        <h4>Você foi vítima de racismo?<br>Denuncie agora!</h4>
+        <a asp-controller="Home" asp-action="Denuncia"><button type="button" class="btn btn-warning btn-denuncia">Denunciar racismo</button></a>
+
+    </div>
+   
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+       
+
+</body>
+

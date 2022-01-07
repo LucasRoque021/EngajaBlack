@@ -23,7 +23,15 @@ namespace EngajaBlack1.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Contato()
+        {
+            return View();
+        }
+        public IActionResult Sobre()
+        {
+            return View();
+        }
+        public IActionResult Denuncia()
         {
             return View();
         }

@@ -1,0 +1,48 @@
+.body{
+    background-image: url("/src/Favela-e-Cristo-background.png");
+    
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+
+
+.card {
+    width: 100%;
+    max-width: 50%;
+    position: absolute;
+    left: 25%;
+    margin: 10px;
+    
+}
+
+.btn-danger {
+    margin: 5px;
+}
+
+
+
+.contato, .form-denuncia{
+    color: #fff;
+    text-align: center;
+    margin-top:100px;
+    width: 100px;
+
+}
+.btn-contato, .btn-denuncia{
+    background-color:red;
+    color: white;
+}
+.denuncia{
+    color: white;
+    text-align: center;
+}
+
+#avisoDenuncia{
+    color: yellow;
+    background-color:rgb(20, 16, 16);
+}

@@ -27,7 +27,7 @@ namespace EngajaBlack1
             services.AddControllersWithViews();
             services.AddControllers();
             services.AddDbContext<Context>(options =>
-            options.UseSqlServer(@"Data Source=LAPTOP-98F87I2T;Initial Catalog=EngajaBlack;Integrated Security=True"));
+            options.UseSqlServer("Data Source=BUILDTHEFUTURE;Initial Catalog=CrudProjeto;Integrated Security=True"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
