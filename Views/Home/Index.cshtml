@@ -1,17 +1,33 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-
+<head>
+    <link rel="stylesheet" href="~/css/home.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+</head>
 <body class="body">
     <div class="card">
 
-        <a asp-controller="Produtoes" asp-action="Index"><button type="button" class="btn btn-danger">Sou
-            Cliente</button></a>
+        <a asp-controller="Produtoes" asp-action="Index">
+            <button type="button" class="btn btn-danger btn-block">
+                <i class="bi bi-bag"></i>
+                Sou Cliente
+            </button>
+        </a>
         
-        <a asp-controller="Empreendedors" asp-action="Create"><button type="button" class="btn btn-danger"
-            >Sou Empreendedor</button></a>
+        <a asp-controller="Empreendedors" asp-action="Create">
+            <button type="button" class="btn btn-danger btn-block">
+                <i class="bi bi-shop-window"></i>
+                Sou Empreendedor
+            </button>
+        </a>
         
-        <a asp-controller = "Fornecedors" asp-action = "Create"><button type="button" class="btn btn-danger" >Sou Forncedor</button></a>
+        <a asp-controller="Fornecedors" asp-action="Create">
+            <button type="button" class="btn btn-danger btn-block">
+                <i class="bi bi-truck"></i>
+                Sou Fornecedor
+            </button>
+        </a>
 
         <div class="modal fade" id="cliente" tabindex="-1" role="dialog" aria-labelledby="clienteLabel"
             aria-hidden="true">

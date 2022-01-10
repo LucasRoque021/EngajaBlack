@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EngajaBlack1.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20220107211516_inicial")]
-    partial class inicial
+    [Migration("20220109223126_BDsqd30")]
+    partial class BDsqd30
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
