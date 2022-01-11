@@ -1,87 +1,161 @@
 ﻿@model EngajaBlack1.Models.Fornecedor
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Cadastro de Fornecedor ";
 }
+<body class="body">
 
-<h1>Create</h1>
 
-<h4>Fornecedor</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="NomeFornecedor" class="control-label"></label>
-                <input asp-for="NomeFornecedor" class="form-control" />
-                <span asp-validation-for="NomeFornecedor" class="text-danger"></span>
+    <h1 class="text-center text-white mt-3">Cadastro de Fornecedor</h1>
+
+    <hr />
+    <div class="form-cadastro mb-5">
+
+        <div class="row">
+            <div class="col-md-12">
+                <form asp-action="Create">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="row">
+
+                        <div class="col-md-6 form-group">
+                            <label asp-for="NomeFornecedor" class="control-label">Nome Fantasia do fornecedor:</label>
+                            <input asp-for="NomeFornecedor" class="form-control" />
+                            <span asp-validation-for="NomeFornecedor" class="text-danger"></span>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label asp-for="CNPJ" class="control-label">CNPJ do fornecedor:</label>
+                            <input asp-for="CNPJ" class="form-control" placeholder="Digite apenas números" />
+                            <span asp-validation-for="CNPJ" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Telefone" class="control-label">Telefone:</label>
+                        <input asp-for="Telefone" type="tel" placeholder="(99)99999-9999" class="form-control" />
+                        <span asp-validation-for="Telefone" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Ramo" class="control-label">Ramo:</label>
+                        <select asp-for="Ramo" class="form-control">
+                            <option selected>Escolha...</option>
+
+                            <option> Comida </option>
+
+                            <option> Roupas </option>
+
+                            <option> Beleza </option>
+
+                            <option> Bares / Depósito de bebidas </option>
+
+                            <option> Eletrônicos </option>
+
+                            <option> Tabacaria </option>
+
+                            <option> Festa </option>
+
+                            <option> Oficina </option>
+
+                            <option> Eventos/arte/cultura </option>
+
+                        </select>
+                        <span asp-validation-for="Ramo" class="text-danger"></span>
+                    </div>
+                    <div class="row">
+
+                        <div class="form-group col-md-6">
+                            <label asp-for="Cidade" class="control-label">Cidade:</label>
+                            <input asp-for="Cidade" class="form-control" />
+                            <span asp-validation-for="Cidade" class="text-danger"></span>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label asp-for="Estado" class="control-label">UF:</label>
+                            <select asp-for="Estado" class="form-control">
+                                <option selected>Escolha...</option>
+                                <option> AC </option>
+                                <option> AL </option>
+                                <option> AM </option>
+                                <option> AP </option>
+                                <option> BA </option>
+                                <option> CE </option>
+                                <option> DF </option>
+                                <option> ES </option>
+                                <option> GO </option>
+                                <option> MA </option>
+                                <option> MG </option>
+                                <option> MS </option>
+                                <option> MT </option>
+                                <option> PA </option>
+                                <option> PB </option>
+                                <option> PE </option>
+                                <option> PI </option>
+                                <option> RJ </option>
+                                <option> RN </option>
+                                <option> RS </option>
+                                <option> RO </option>
+                                <option> RR </option>
+                                <option> SC </option>
+                                <option> SP </option>
+                                <option> SE </option>
+                                <option> TO </option>
+                            </select>
+                            <span asp-validation-for="Estado" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="row">
+
+                        <div class="form-group col-md-6">
+                            <label asp-for="Endereco" class="control-label">Endereço:</label>
+                            <input asp-for="Endereco" class="form-control" placeholder="Rua, n°, complemento" />
+                            <span asp-validation-for="Endereco" class="text-danger"></span>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label asp-for="CEP" class="control-label">CEP:</label>
+                            <input asp-for="CEP" class="form-control" placeholder="Digite apenas números" />
+                            <span asp-validation-for="CEP" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="row">
+
+                        <div class="form-group col-md-6">
+                            <label asp-for="Nome" class="control-label">Nome do proprietário da empresa:</label>
+                            <input asp-for="Nome" class="form-control" placeholder="Nome Completo" />
+                            <span asp-validation-for="Nome" class="text-danger"></span>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label asp-for="CPF" class="control-label">CPF do proprietário da empresa:</label>
+                            <input asp-for="CPF" class="form-control" placeholder="Digite apenas números" />
+                            <span asp-validation-for="CPF" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        <div class="form-group col-md-6">
+                            <label asp-for="Email" class="control-label">E-mail:</label>
+                            <input asp-for="Email" class="form-control" type="email" placeholder="Exemplo: fornecedor@gmail.com" />
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label asp-for="Password" class="control-label">Senha:</label>
+                            <input asp-for="Password" class="form-control" type="password" />
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group mt-2 mb-2">
+                        <input asp-controller="Produtoes" asp-action="Create" type="submit" value="Cadastrar" class="btn btn-primary" />
+                    </div>
+                </form>
             </div>
-            <div class="form-group">
-                <label asp-for="CNPJ" class="control-label"></label>
-                <input asp-for="CNPJ" class="form-control" />
-                <span asp-validation-for="CNPJ" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Cidade" class="control-label"></label>
-                <input asp-for="Cidade" class="form-control" />
-                <span asp-validation-for="Cidade" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Estado" class="control-label"></label>
-                <input asp-for="Estado" class="form-control" />
-                <span asp-validation-for="Estado" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Ramo" class="control-label"></label>
-                <input asp-for="Ramo" class="form-control" />
-                <span asp-validation-for="Ramo" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Nome" class="control-label"></label>
-                <input asp-for="Nome" class="form-control" />
-                <span asp-validation-for="Nome" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CPF" class="control-label"></label>
-                <input asp-for="CPF" class="form-control" />
-                <span asp-validation-for="CPF" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Email" class="control-label"></label>
-                <input asp-for="Email" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Password" class="control-label"></label>
-                <input asp-for="Password" class="form-control" />
-                <span asp-validation-for="Password" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Telefone" class="control-label"></label>
-                <input asp-for="Telefone" class="form-control" />
-                <span asp-validation-for="Telefone" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Endereco" class="control-label"></label>
-                <input asp-for="Endereco" class="form-control" />
-                <span asp-validation-for="Endereco" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CEP" class="control-label"></label>
-                <input asp-for="CEP" class="form-control" />
-                <span asp-validation-for="CEP" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+        </div>
+        <div>
+            <a asp-action="Index">Back to List</a>
+        </div>
     </div>
-</div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+
+</body>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

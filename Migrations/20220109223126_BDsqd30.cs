@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace EngajaBlack1.Migrations
 {
-    public partial class banco : Migration
+    public partial class BDsqd30 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

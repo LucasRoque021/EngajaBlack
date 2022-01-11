@@ -1,0 +1,109 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    
+}
+
+
+
+.body{
+    background: url("../img/Favela-e-Cristo-background.png") no-repeat;
+    background-size: cover;
+    
+    
+}
+
+#logo {
+    width: 50px;
+}
+
+ul, .titulo {
+    font-family: 'Lacquer', cursive;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    
+}
+
+
+
+.card {
+    width: 100%;
+    max-width: 50%;
+    margin-top: 10px;
+    margin-left: 25%;
+    display: block;
+    padding: 3px;
+    
+    
+}
+
+.card a{
+    text-decoration: none;
+}
+
+.card a:hover{
+    text-decoration: none;
+}
+
+btn-danger{
+    margin: 5px;
+}
+
+hr {
+    visibility: hidden;
+    height: 1px;
+    margin: 3px;
+
+}
+
+.contato, .form-denuncia{
+    color: #fff;
+    text-align: center;
+    margin-top:100px;
+    width: 50%;
+
+}
+.btn-contato, .btn-enviar-denuncia{
+    background-color: red;
+    color: white;
+}
+
+.btn-denuncia{
+    color:black;
+}
+
+.denuncia {
+    text-align: center;
+    width: 400px;
+    margin-bottom: 80px;
+}
+
+#avisoDenuncia{
+    color: yellow;
+    padding:5px;
+}
+
+.form-cadastro, .tabela {
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 5px 3px black;
+    border-radius: 3px;
+    width: 80%;
+    padding: 10px;
+    background-color: azure;
+}
+
+.container {
+    margin-top: 10px;
+}
+
+.integrantes{
+    display: flex;
+    justify-content: center;
+}

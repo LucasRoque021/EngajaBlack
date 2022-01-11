@@ -48,7 +48,7 @@ namespace EngajaBlack1.Controllers
         // GET: Produtoes/Create
         public IActionResult Create()
         {
-            ViewData["CodigoFornecedor"] = new SelectList(_context.Fornecedor, "CodigoFornecedor", "CEP");
+            ViewData["CodigoFornecedor"] = new SelectList(_context.Fornecedor, "CodigoFornecedor", "NomeFornecedor");
             ViewData["NumPedido"] = new SelectList(_context.Pedido, "NumPedido", "NumPedido");
             return View();
         }
@@ -66,7 +66,7 @@ namespace EngajaBlack1.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["CodigoFornecedor"] = new SelectList(_context.Fornecedor, "CodigoFornecedor", "CEP", produto.CodigoFornecedor);
+            ViewData["CodigoFornecedor"] = new SelectList(_context.Fornecedor, "CodigoFornecedor", "NomeFornecedor", produto.CodigoFornecedor);
             ViewData["NumPedido"] = new SelectList(_context.Pedido, "NumPedido", "NumPedido", produto.NumPedido);
             return View(produto);
         }
@@ -84,7 +84,7 @@ namespace EngajaBlack1.Controllers
             {
                 return NotFound();
             }
-            ViewData["CodigoFornecedor"] = new SelectList(_context.Fornecedor, "CodigoFornecedor", "CEP", produto.CodigoFornecedor);
+            ViewData["CodigoFornecedor"] = new SelectList(_context.Fornecedor, "CodigoFornecedor", "NomeFornecedor", produto.CodigoFornecedor);
             ViewData["NumPedido"] = new SelectList(_context.Pedido, "NumPedido", "NumPedido", produto.NumPedido);
             return View(produto);
         }
