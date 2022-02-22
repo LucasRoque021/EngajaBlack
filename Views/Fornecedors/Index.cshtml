@@ -4,16 +4,16 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1 class="text-white mt-3">Tabela de Fornecedores</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a class="btn btn-primary" asp-action="Create">Cadastrar novo fornecedor</a>
 </p>
 <table class="table table-responsive tabela">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.NomeFornecedor)
+                Nome do Fornecedor
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.CNPJ)
@@ -28,22 +28,22 @@
                 @Html.DisplayNameFor(model => model.Ramo)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Nome)
+                Nome do Proprietário
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CPF)
+                CPF do Proprietário
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Email)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Password)
+                Senha
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Telefone)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Endereco)
+                Endereço
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.CEP)
@@ -91,9 +91,9 @@
                 @Html.DisplayFor(modelItem => item.CEP)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.CodigoFornecedor">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.CodigoFornecedor">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.CodigoFornecedor">Delete</a>
+                <a class="btn btn-primary mb-1" asp-action="Edit" asp-route-id="@item.CodigoFornecedor">Editar</a> 
+                <a class="btn btn-info mb-1" asp-action="Details" asp-route-id="@item.CodigoFornecedor">Detalhes</a> 
+                <a class="btn btn-danger mb-1" asp-action="Delete" asp-route-id="@item.CodigoFornecedor">Apagar</a>
             </td>
         </tr>
 }

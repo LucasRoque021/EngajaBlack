@@ -4,12 +4,12 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1 class="text-white mt-3">Tabela de Clientes</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a class="btn btn-primary" asp-action="Create">Cadastrar novo cliente</a>
 </p>
-<table class="table tabela">
+<table class="table table-responsive tabela">
     <thead>
         <tr>
             <th>
@@ -22,19 +22,19 @@
                 @Html.DisplayNameFor(model => model.Email)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Password)
+                Senha
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Telefone)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Endereco)
+                Endereço
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.CEP)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CreditCard)
+                Cartão de Crédito
             </th>
             <th></th>
         </tr>
@@ -67,9 +67,9 @@
                 @Html.DisplayFor(modelItem => item.CreditCard)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.CodigoCliente">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.CodigoCliente">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.CodigoCliente">Delete</a>
+                <a class="btn btn-primary mb-1" asp-action="Edit" asp-route-id="@item.CodigoCliente">Editar</a> 
+                <a class="btn btn-info mb-1" asp-action="Details" asp-route-id="@item.CodigoCliente">Detalhes</a>
+                <a class="btn btn-danger mb-1" asp-action="Delete" asp-route-id="@item.CodigoCliente">Apagar</a>
             </td>
         </tr>
 }

@@ -80,7 +80,7 @@ hr {
 
 .denuncia {
     text-align: center;
-    width: 400px;
+    width: 40%;
     margin-bottom: 80px;
 }
 
@@ -106,4 +106,15 @@ hr {
 .integrantes{
     display: flex;
     justify-content: center;
+}
+
+@media (max-width: 500px){
+    .denuncia button{
+        font-size: 12px;
+    }
+
+    .btn-menu{
+        font-size: 14px;
+    }
+
 }

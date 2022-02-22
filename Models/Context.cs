@@ -10,6 +10,7 @@ namespace EngajaBlack1.Models
     {
         public Context(DbContextOptions<Context> options) : base(options)
         {
+            Database.EnsureCreated();
 
         }
 

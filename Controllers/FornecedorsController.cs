@@ -59,7 +59,7 @@ namespace EngajaBlack1.Controllers
             {
                 _context.Add(fornecedor);
                 await _context.SaveChangesAsync();
-                //return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Index));
             }
             return View(fornecedor);
         }
